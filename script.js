@@ -217,3 +217,240 @@ document.addEventListener("DOMContentLoaded", () => {
     font-weight:700;
 
 }
+/* ==========================================
+   PREMIUM EFFECTS
+========================================== */
+
+.avatar{
+
+    position:relative;
+
+    overflow:hidden;
+
+    animation:float 5s ease-in-out infinite;
+
+}
+
+.avatar::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:220%;
+
+    height:220%;
+
+    background:conic-gradient(
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    animation:rotate 6s linear infinite;
+
+}
+
+.avatar span{
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+@keyframes rotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ----------------------------- */
+
+.skill-card{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.skill-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:100%;
+
+    height:4px;
+
+    top:0;
+
+    left:0;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #2563EB,
+
+    #38BDF8
+
+    );
+
+}
+
+/* ----------------------------- */
+
+.project-card{
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.project-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:0;
+
+    height:4px;
+
+    background:#38BDF8;
+
+    transition:.4s;
+
+}
+
+.project-card:hover::after{
+
+    width:100%;
+
+}
+
+/* ----------------------------- */
+
+.timeline-item{
+
+    transition:.35s;
+
+}
+
+.timeline-item:hover{
+
+    transform:translateX(10px);
+
+}
+
+/* ----------------------------- */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111827;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563EB;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#3B82F6;
+
+}
+
+/* ----------------------------- */
+
+::selection{
+
+    background:#2563EB;
+
+    color:white;
+
+}
+
+/* ----------------------------- */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(
+
+        rgba(255,255,255,.03) 1px,
+
+        transparent 1px
+
+    );
+
+    background-size:40px 40px;
+
+    opacity:.4;
+
+}
